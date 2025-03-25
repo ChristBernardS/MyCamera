@@ -27,4 +27,4 @@ MyCamera adalah aplikasi Android yang memungkinkan pengguna untuk mengambil gamb
 ### Kontributor
 - @ChristBernardS - Christopher Bernard
 - @Ricardoaugusto31 - Ricardo Yan Augusto
-- @Fiegoldes = Fiegoldes Shindy
+- @Fiegoldes - Fiegoldes Shindy
