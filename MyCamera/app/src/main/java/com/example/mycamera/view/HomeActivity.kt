@@ -21,6 +21,9 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var storyRecyclerView: RecyclerView
     private lateinit var cameraButton: ImageButton
+    private lateinit var chatButton: ImageButton
+    private lateinit var notificationButton: ImageButton
+    private lateinit var profileButton: ImageButton
     private lateinit var storyAdapter: StoryAdapter
     private val stories = mutableListOf<Story>()
     private lateinit var databaseHelper: DatabaseHelper
@@ -56,6 +59,10 @@ class HomeActivity : AppCompatActivity() {
         databaseHelper = DatabaseHelper(this)
         storyRecyclerView = findViewById(R.id.recyclerViewStories)
         cameraButton = findViewById(R.id.btnCamera)
+        profileButton = findViewById(R.id.btnProfile)
+
+        chatButton = findViewById(R.id.btnChat)
+        notificationButton = findViewById(R.id.btnNotification)
 
         // Setup RecyclerView dengan onClick listener
         // Pastikan storyAdapter diberikan onItemClick
@@ -79,6 +86,21 @@ class HomeActivity : AppCompatActivity() {
         cameraButton.setOnClickListener {
             val intent = Intent(this, CameraActivity::class.java)
             cameraLauncher.launch(intent)
+        }
+
+        chatButton.setOnClickListener {
+            val intent = Intent(this, ChatActivity::class.java)
+            startActivity(intent)
+        }
+
+        notificationButton.setOnClickListener {
+            val intent = Intent(this, NotificationActivity::class.java)
+            startActivity(intent)
+        }
+
+        profileButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
     }
 
