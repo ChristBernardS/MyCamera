@@ -11,16 +11,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyCamera"
+        android:name=".MyCamera"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".view.RegisterActivity" android:exported="true"/>
+        <activity
+            android:name=".view.CameraActivity"
+            android:exported="true"
+            />
+
+        <activity android:name=".view.HomeActivity"/>
+        <activity android:name=".view.ImageDetailActivity"/>
+        <activity android:name=".view.ChatActivity"/>
+        <activity android:name=".view.MessageActivity"/>
+        <activity android:name=".view.NotificationActivity"/>
+        <activity android:name=".view.ProfileActivity"/>
+        <activity android:name=".view.AddFriendActivity"/>
+
+        <meta-data
+            android:name="androidx.camera.defaultConfigProvider"
+            android:value="androidx.camera.camera2.Camera2Config" />
+
     </application>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
 
 </manifest>
