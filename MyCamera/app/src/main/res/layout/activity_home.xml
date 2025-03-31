@@ -5,45 +5,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".view.HomeActivity">
 
-    <!-- RecyclerView untuk menampilkan daftar story -->
+    <FrameLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="20dp"
+            android:id="@+id/btnNotification"
+            android:src="@drawable/notification"
+            android:backgroundTint="@android:color/transparent"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/btnChat"
+            android:src="@drawable/chat"
+            android:backgroundTint="@android:color/transparent"/>
+
+    </FrameLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewStories"
         android:layout_width="match_parent"
-        android:layout_height="1120dp"
-        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
         android:layout_above="@id/footerContainer"
-        android:padding="10dp"
+        android:layout_below="@id/headerContainer"
         android:clipToPadding="false"
-        android:paddingBottom="160dp"
         android:overScrollMode="never"
-        android:scrollbars="horizontal"/>
+        android:padding="10dp"
+        android:scrollbars="horizontal" />
 
     <FrameLayout
         android:id="@+id/footerContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@android:color/white"
+            android:layout_height="75dp"
+            android:background="@color/green"
             android:elevation="4dp"/>
 
         <ImageButton
             android:id="@+id/btnCamera"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@android:color/white"
-            android:src="@drawable/icon_camera"
-            app:tint="@color/darkGreen"
+            android:background="@color/green"
+            android:src="@drawable/nav_camera"
             android:scaleType="fitCenter"
             android:elevation="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="40dp"
+            android:background="@color/green"
+            android:src="@drawable/nav_profile"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="40dp"
+            android:background="@color/green"
+            android:src="@drawable/nav_home"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"/>
+
 
     </FrameLayout>
 
