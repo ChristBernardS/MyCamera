@@ -2,6 +2,9 @@
 
 MyCamera adalah aplikasi Android yang memungkinkan pengguna untuk mengambil gambar menggunakan kamera dan menyimpannya ke dalam database lokal. Aplikasi ini juga menyediakan fitur untuk melihat daftar gambar yang telah diambil serta menghapus gambar yang tidak diperlukan.
 
+### Download file apk:
+- [Download zip disini](https://drive.google.com/file/d/1ctgMsj6FfU-ROgotSI-WrqrTOCZLMG8-/view?usp=sharing)
+
 ### Fitur Utama:
 - Ambil Gambar: Menggunakan kamera perangkat untuk mengambil foto.
 - Simpan Gambar: Gambar yang diambil akan disimpan dalam database SQLite.
