@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    android:layout_gravity="center_vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footerContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:elevation="6dp" />
+
+        <ImageButton
+            android:id="@+id/captureButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/captbutton"
+            app:tint="@color/darkGreen" />
+
+        <ImageButton
+            android:id="@+id/switchCameraButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="60dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/swbutton"
+            app:tint="@color/darkGreen" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/footerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/green"
+            android:elevation="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/green"
+            android:src="@drawable/nav_camera"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="40dp"
+            android:background="@color/green"
+            android:src="@drawable/nav_profile"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="40dp"
+            android:background="@color/green"
+            android:src="@drawable/nav_home"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"/>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

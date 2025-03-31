@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/icon"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/friend"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+
+    <EditText
+        android:layout_below="@id/icon"
+        android:id="@+id/usernameFriend"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/addFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameFriend"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/green"
+        android:text="add friend" />
+
+    <FrameLayout
+        android:id="@+id/footerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/green"
+            android:elevation="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/green"
+            android:src="@drawable/nav_camera"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="40dp"
+            android:background="@color/green"
+            android:src="@drawable/nav_profile"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="40dp"
+            android:background="@color/green"
+            android:src="@drawable/nav_home"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"/>
+
+
+    </FrameLayout>
+
+</RelativeLayout>
